@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<from>
+        <button type="button" onclick="choi()">Chơi</button>
+</from>
+<script>
+
+        function choi() {
+            let a = parseInt(prompt("Nhập vào số lớn nhất"));
+            let b = parseInt(prompt("Nhập vào số nhỏ nhất"));
+            let random = Math.floor(Math.random()*(a - b)+b);
+            for(let j=0;j<3;j++) {
+                let i = parseInt(prompt("Nhập số muốn đoán"));
+                if (i == random) {
+                    alert("Bạn đã đoán đúng");
+                    j=3;
+                } else if (i > random ||i < random) {
+                    alert("Bạn đã đoán sai");
+
+                }
+            }
+        }
+
+</script>
+</body>
+</html>
